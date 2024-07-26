@@ -1,12 +1,16 @@
 package disgohook
 
+import "time"
+
 type Embed struct {
-	Title       string   `json:"title"`
-	Description string   `json:"description"`
-	Url         string   `json:"url"`
-	Color       int      `json:"color"`
-	Fields      []*Field `json:"fields"`
-	Author      *Author  `json:"author"`
+	Title       string    `json:"title"`
+	Description string    `json:"description"`
+	Url         string    `json:"url"`
+	Color       int       `json:"color"`
+	Fields      []*Field  `json:"fields"`
+	Author      *Author   `json:"author"`
+	Footer      *Footer   `json:"footer"`
+	Timestamp   time.Time `json:"timestamp"`
 }
 
 type EmbedBuilder struct {
@@ -16,6 +20,8 @@ type EmbedBuilder struct {
 	color       int
 	fields      []*Field
 	author      *Author
+	footer      *Footer
+	timestamp   time.Time
 }
 
 func NewEmbedBuilder() *EmbedBuilder {
@@ -49,6 +55,16 @@ func (builder *EmbedBuilder) SetFields(fields ...*Field) *EmbedBuilder {
 
 func (builder *EmbedBuilder) SetAuthor(author *Author) *EmbedBuilder {
 	builder.author = author
+	return builder
+}
+
+func (builder *EmbedBuilder) SetFooter(footer *Footer) *EmbedBuilder {
+	builder.footer = footer
+	return builder
+}
+
+func (builder *EmbedBuilder) SetTimestamp(timestamp time.Time) *EmbedBuilder {
+	builder.timestamp = timestamp
 	return builder
 }
 
