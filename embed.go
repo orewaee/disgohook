@@ -20,6 +20,8 @@ type EmbedBuilder struct {
 	color       int
 	fields      []*Field
 	author      *Author
+	footer      *Footer
+	timestamp   time.Time
 }
 
 func NewEmbedBuilder() *EmbedBuilder {
@@ -53,6 +55,16 @@ func (builder *EmbedBuilder) SetFields(fields ...*Field) *EmbedBuilder {
 
 func (builder *EmbedBuilder) SetAuthor(author *Author) *EmbedBuilder {
 	builder.author = author
+	return builder
+}
+
+func (builder *EmbedBuilder) SetFooter(footer *Footer) *EmbedBuilder {
+	builder.footer = footer
+	return builder
+}
+
+func (builder *EmbedBuilder) SetTimestamp(timestamp time.Time) *EmbedBuilder {
+	builder.timestamp = timestamp
 	return builder
 }
 
