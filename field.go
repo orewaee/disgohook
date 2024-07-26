@@ -1,4 +1,10 @@
-package field
+package disgohook
+
+type Field struct {
+	Name   string `json:"name"`
+	Value  string `json:"value"`
+	Inline bool   `json:"inline"`
+}
 
 type FieldBuilder struct {
 	name   string

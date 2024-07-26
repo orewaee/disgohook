@@ -1,17 +1,21 @@
-package embed
+package disgohook
 
-import (
-	"github.com/orewaee/disgohook"
-	"github.com/orewaee/disgohook/author"
-)
+type Embed struct {
+	Title       string   `json:"title"`
+	Description string   `json:"description"`
+	Url         string   `json:"url"`
+	Color       int      `json:"color"`
+	Fields      []*Field `json:"fields"`
+	Author      *Author  `json:"author"`
+}
 
 type EmbedBuilder struct {
 	title       string
 	description string
 	url         string
 	color       int
-	fields      []*disgohook.Field
-	author      *author.Author
+	fields      []*Field
+	author      *Author
 }
 
 func NewEmbedBuilder() *EmbedBuilder {
@@ -38,12 +42,12 @@ func (builder *EmbedBuilder) SetColor(color int) *EmbedBuilder {
 	return builder
 }
 
-func (builder *EmbedBuilder) SetFields(fields ...*disgohook.Field) *EmbedBuilder {
+func (builder *EmbedBuilder) SetFields(fields ...*Field) *EmbedBuilder {
 	builder.fields = fields
 	return builder
 }
 
-func (builder *EmbedBuilder) SetAuthor(author *author.Author) *EmbedBuilder {
+func (builder *EmbedBuilder) SetAuthor(author *Author) *EmbedBuilder {
 	builder.author = author
 	return builder
 }
