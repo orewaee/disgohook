@@ -1,13 +1,16 @@
 package disgohook
 
+import "time"
+
 type Embed struct {
-	Title       string   `json:"title"`
-	Description string   `json:"description"`
-	Url         string   `json:"url"`
-	Color       int      `json:"color"`
-	Fields      []*Field `json:"fields"`
-	Author      *Author  `json:"author"`
-	Footer      *Footer  `json:"footer"`
+	Title       string    `json:"title"`
+	Description string    `json:"description"`
+	Url         string    `json:"url"`
+	Color       int       `json:"color"`
+	Fields      []*Field  `json:"fields"`
+	Author      *Author   `json:"author"`
+	Footer      *Footer   `json:"footer"`
+	Timestamp   time.Time `json:"timestamp"`
 }
 
 type EmbedBuilder struct {
