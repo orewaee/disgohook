@@ -7,6 +7,7 @@ type Embed struct {
 	Color       int      `json:"color"`
 	Fields      []*Field `json:"fields"`
 	Author      *Author  `json:"author"`
+	Footer      *Footer  `json:"footer"`
 }
 
 type EmbedBuilder struct {
