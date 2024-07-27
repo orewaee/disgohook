@@ -3,14 +3,16 @@ package disgohook
 import "time"
 
 type Embed struct {
-	Title       string    `json:"title"`
-	Description string    `json:"description"`
-	Url         string    `json:"url"`
-	Color       int       `json:"color"`
-	Fields      []*Field  `json:"fields"`
-	Author      *Author   `json:"author"`
-	Footer      *Footer   `json:"footer"`
-	Timestamp   time.Time `json:"timestamp"`
+	Title       string     `json:"title"`
+	Description string     `json:"description"`
+	Url         string     `json:"url"`
+	Color       int        `json:"color"`
+	Image       *Image     `json:"image"`
+	Thumbnail   *Thumbnail `json:"thumbnail"`
+	Fields      []*Field   `json:"fields"`
+	Author      *Author    `json:"author"`
+	Footer      *Footer    `json:"footer"`
+	Timestamp   time.Time  `json:"timestamp"`
 }
 
 type EmbedBuilder struct {
@@ -18,6 +20,8 @@ type EmbedBuilder struct {
 	description string
 	url         string
 	color       int
+	image       *Image
+	thumbnail   *Thumbnail
 	fields      []*Field
 	author      *Author
 	footer      *Footer
@@ -45,6 +49,16 @@ func (builder *EmbedBuilder) SetUrl(url string) *EmbedBuilder {
 
 func (builder *EmbedBuilder) SetColor(color int) *EmbedBuilder {
 	builder.color = color
+	return builder
+}
+
+func (builder *EmbedBuilder) SetImage(image *Image) *EmbedBuilder {
+	builder.image = image
+	return builder
+}
+
+func (builder *EmbedBuilder) SetThumbnail(thumbnail *Thumbnail) *EmbedBuilder {
+	builder.thumbnail = thumbnail
 	return builder
 }
 
