@@ -1,9 +1,9 @@
 package disgohook
 
 type Field struct {
-	Name   string `json:"name"`
-	Value  string `json:"value"`
-	Inline bool   `json:"inline"`
+	Name   string `json:"name,omitempty"`
+	Value  string `json:"value,omitempty"`
+	Inline bool   `json:"inline,omitempty"`
 }
 
 type FieldBuilder struct {

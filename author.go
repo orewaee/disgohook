@@ -1,9 +1,9 @@
 package disgohook
 
 type Author struct {
-	Name    string `json:"name"`
-	Url     string `json:"url"`
-	IconUrl string `json:"icon_url"`
+	Name    string `json:"name,omitempty"`
+	Url     string `json:"url,omitempty"`
+	IconUrl string `json:"icon_url,omitempty"`
 }
 
 type AuthorBuilder struct {
