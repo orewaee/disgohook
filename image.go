@@ -1,7 +1,7 @@
 package disgohook
 
 type Image struct {
-	Url string `json:"url"`
+	Url string `json:"url,omitempty"`
 }
 
 type ImageBuilder struct {

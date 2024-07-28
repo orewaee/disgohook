@@ -57,8 +57,8 @@ func (builder *WebhookBuilder) Build() *Webhook {
 }
 
 type Body struct {
-	Content string   `json:"content"`
-	Embeds  []*Embed `json:"embeds"`
+	Content string   `json:"content,omitempty"`
+	Embeds  []*Embed `json:"embeds,omitempty"`
 }
 
 func (webhook *Webhook) Send() error {
