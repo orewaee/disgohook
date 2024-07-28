@@ -3,16 +3,16 @@ package disgohook
 import "time"
 
 type Embed struct {
-	Title       string     `json:"title"`
-	Description string     `json:"description"`
-	Url         string     `json:"url"`
-	Color       int        `json:"color"`
-	Image       *Image     `json:"image"`
-	Thumbnail   *Thumbnail `json:"thumbnail"`
-	Fields      []*Field   `json:"fields"`
-	Author      *Author    `json:"author"`
-	Footer      *Footer    `json:"footer"`
-	Timestamp   time.Time  `json:"timestamp"`
+	Title       string     `json:"title,omitempty"`
+	Description string     `json:"description,omitempty"`
+	Url         string     `json:"url,omitempty"`
+	Color       int        `json:"color,omitempty"`
+	Image       *Image     `json:"image,omitempty"`
+	Thumbnail   *Thumbnail `json:"thumbnail,omitempty"`
+	Fields      []*Field   `json:"fields,omitempty"`
+	Author      *Author    `json:"author,omitempty"`
+	Footer      *Footer    `json:"footer,omitempty"`
+	Timestamp   *time.Time `json:"timestamp,omitempty"`
 }
 
 type EmbedBuilder struct {
@@ -25,7 +25,7 @@ type EmbedBuilder struct {
 	fields      []*Field
 	author      *Author
 	footer      *Footer
-	timestamp   time.Time
+	timestamp   *time.Time
 }
 
 func NewEmbedBuilder() *EmbedBuilder {
@@ -77,7 +77,7 @@ func (builder *EmbedBuilder) SetFooter(footer *Footer) *EmbedBuilder {
 	return builder
 }
 
-func (builder *EmbedBuilder) SetTimestamp(timestamp time.Time) *EmbedBuilder {
+func (builder *EmbedBuilder) SetTimestamp(timestamp *time.Time) *EmbedBuilder {
 	builder.timestamp = timestamp
 	return builder
 }

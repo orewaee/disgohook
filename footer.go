@@ -1,8 +1,8 @@
 package disgohook
 
 type Footer struct {
-	Text    string `json:"text"`
-	IconUrl string `json:"icon_url"`
+	Text    string `json:"text,omitempty"`
+	IconUrl string `json:"icon_url,omitempty"`
 }
 
 type FooterBuilder struct {
