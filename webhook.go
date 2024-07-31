@@ -62,9 +62,11 @@ type Body struct {
 }
 
 func (webhook *Webhook) SetName(name string) error {
-	body, err := json.Marshal(struct {
+	data := struct {
 		Name string `json:"name"`
-	}{name})
+	}{name}
+
+	body, err := json.Marshal(data)
 	if err != nil {
 		return err
 	}
@@ -107,9 +109,11 @@ func (webhook *Webhook) SetName(name string) error {
 }
 
 func (webhook *Webhook) SetAvatar(base64 string) error {
-	body, err := json.Marshal(struct {
+	data := struct {
 		Avatar string `json:"avatar"`
-	}{base64})
+	}{base64}
+
+	body, err := json.Marshal(data)
 	if err != nil {
 		return err
 	}
@@ -158,7 +162,7 @@ func (webhook *Webhook) Send() error {
 	}
 
 	buffer := bytes.NewBuffer(body)
-	req, err := http.NewRequest("POST", webhook.url, buffer)
+	req, err := http.NewRequest(http.MethodPost, webhook.url, buffer)
 	if err != nil {
 		return err
 	}
