@@ -1,5 +1,7 @@
 ## disgohook
 
+![banner](https://i.imgur.com/uNrMbmV.png)
+
 The disgohook package allows you to send [Discord webhooks](https://discord.com/developers/docs/resources/webhook) quickly and easily. It does not use any external libs and is implemented in pure [Go](https://go.dev/).
 
 
