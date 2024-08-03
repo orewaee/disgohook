@@ -1,15 +1,18 @@
 ## disgohook
 
+[![](https://img.shields.io/github/v/tag/orewaee/disgohook?style=flat&label=version&color=01ADDB)](https://pkg.go.dev/github.com/orewaee/disgohook) ![](https://img.shields.io/github/license/orewaee/disgohook?style=flat&color=01ADDB) [![](https://img.shields.io/discord/1172841532827635742?style=flat&label=Singularity%20R%26D%20%F0%9F%91%BD&color=5865F2)](https://discord.gg/p2QcD2856M)
+
 The disgohook package allows you to send [Discord webhooks](https://discord.com/developers/docs/resources/webhook) quickly and easily. It does not use any external libs and is implemented in pure [Go](https://go.dev/).
 
 
-## Installation
+## 📦 Installation
 
 ```bash
-go get -u github.com/orewaee/disgohook
+go get github.com/orewaee/disgohook
 ```
 
-## Simple example
+
+## 🤖 Simple example
 
 The disgohook package uses builders to generate the correct webhook structure. For example, to send a message with an embed, you can do this:
 
