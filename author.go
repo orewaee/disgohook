@@ -16,17 +16,17 @@ func NewAuthorBuilder() *AuthorBuilder {
 	return &AuthorBuilder{}
 }
 
-func (builder *AuthorBuilder) SetName(name string) *AuthorBuilder {
+func (builder *AuthorBuilder) Name(name string) *AuthorBuilder {
 	builder.name = name
 	return builder
 }
 
-func (builder *AuthorBuilder) SetUrl(url string) *AuthorBuilder {
+func (builder *AuthorBuilder) Url(url string) *AuthorBuilder {
 	builder.url = url
 	return builder
 }
 
-func (builder *AuthorBuilder) SetIconUrl(iconUrl string) *AuthorBuilder {
+func (builder *AuthorBuilder) IconUrl(iconUrl string) *AuthorBuilder {
 	builder.iconUrl = iconUrl
 	return builder
 }

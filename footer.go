@@ -14,12 +14,12 @@ func NewFooterBuilder() *FooterBuilder {
 	return &FooterBuilder{}
 }
 
-func (builder *FooterBuilder) SetText(text string) *FooterBuilder {
+func (builder *FooterBuilder) Text(text string) *FooterBuilder {
 	builder.text = text
 	return builder
 }
 
-func (builder *FooterBuilder) SetIconUrl(iconUrl string) *FooterBuilder {
+func (builder *FooterBuilder) IconUrl(iconUrl string) *FooterBuilder {
 	builder.iconUrl = iconUrl
 	return builder
 }

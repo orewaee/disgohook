@@ -32,52 +32,52 @@ func NewEmbedBuilder() *EmbedBuilder {
 	return &EmbedBuilder{}
 }
 
-func (builder *EmbedBuilder) SetTitle(title string) *EmbedBuilder {
+func (builder *EmbedBuilder) Title(title string) *EmbedBuilder {
 	builder.title = title
 	return builder
 }
 
-func (builder *EmbedBuilder) SetDescription(description string) *EmbedBuilder {
+func (builder *EmbedBuilder) Description(description string) *EmbedBuilder {
 	builder.description = description
 	return builder
 }
 
-func (builder *EmbedBuilder) SetUrl(url string) *EmbedBuilder {
+func (builder *EmbedBuilder) Url(url string) *EmbedBuilder {
 	builder.url = url
 	return builder
 }
 
-func (builder *EmbedBuilder) SetColor(color int) *EmbedBuilder {
+func (builder *EmbedBuilder) Color(color int) *EmbedBuilder {
 	builder.color = color
 	return builder
 }
 
-func (builder *EmbedBuilder) SetImage(image *Image) *EmbedBuilder {
+func (builder *EmbedBuilder) Image(image *Image) *EmbedBuilder {
 	builder.image = image
 	return builder
 }
 
-func (builder *EmbedBuilder) SetThumbnail(thumbnail *Thumbnail) *EmbedBuilder {
+func (builder *EmbedBuilder) Thumbnail(thumbnail *Thumbnail) *EmbedBuilder {
 	builder.thumbnail = thumbnail
 	return builder
 }
 
-func (builder *EmbedBuilder) SetFields(fields ...*Field) *EmbedBuilder {
+func (builder *EmbedBuilder) Fields(fields ...*Field) *EmbedBuilder {
 	builder.fields = fields
 	return builder
 }
 
-func (builder *EmbedBuilder) SetAuthor(author *Author) *EmbedBuilder {
+func (builder *EmbedBuilder) Author(author *Author) *EmbedBuilder {
 	builder.author = author
 	return builder
 }
 
-func (builder *EmbedBuilder) SetFooter(footer *Footer) *EmbedBuilder {
+func (builder *EmbedBuilder) Footer(footer *Footer) *EmbedBuilder {
 	builder.footer = footer
 	return builder
 }
 
-func (builder *EmbedBuilder) SetTimestamp(timestamp *time.Time) *EmbedBuilder {
+func (builder *EmbedBuilder) Timestamp(timestamp *time.Time) *EmbedBuilder {
 	builder.timestamp = timestamp
 	return builder
 }

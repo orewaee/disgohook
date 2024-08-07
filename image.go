@@ -12,7 +12,7 @@ func NewImageBuilder() *ImageBuilder {
 	return &ImageBuilder{}
 }
 
-func (builder *ImageBuilder) SetUrl(url string) *ImageBuilder {
+func (builder *ImageBuilder) Url(url string) *ImageBuilder {
 	builder.url = url
 	return builder
 }

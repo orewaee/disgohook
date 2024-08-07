@@ -16,17 +16,17 @@ func NewFieldBuilder() *FieldBuilder {
 	return &FieldBuilder{}
 }
 
-func (builder *FieldBuilder) SetName(name string) *FieldBuilder {
+func (builder *FieldBuilder) Name(name string) *FieldBuilder {
 	builder.name = name
 	return builder
 }
 
-func (builder *FieldBuilder) SetValue(value string) *FieldBuilder {
+func (builder *FieldBuilder) Value(value string) *FieldBuilder {
 	builder.value = value
 	return builder
 }
 
-func (builder *FieldBuilder) SetInline(inline bool) *FieldBuilder {
+func (builder *FieldBuilder) Inline(inline bool) *FieldBuilder {
 	builder.inline = inline
 	return builder
 }

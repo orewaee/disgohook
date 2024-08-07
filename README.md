@@ -27,14 +27,14 @@ import (
 func main() {
     embed := disgohook.
         NewEmbedBuilder().
-        SetColor(0x5865f2).
-        SetTitle("something very important").
-        SetDescription("disgohook is already here :alien:").
+        Color(0x5865f2).
+        Title("something very important").
+        Description("disgohook is already here :alien:").
         Build()
     
     webhook := disgohook.
         FromIdAndToken("your webhook id", "your webhook token").
-        SetEmbeds(embed).
+        Embeds(embed).
         Build()
     
     if err := webhook.Send(); err != nil {

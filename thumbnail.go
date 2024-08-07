@@ -12,7 +12,7 @@ func NewThumbnailBuilder() *ThumbnailBuilder {
 	return &ThumbnailBuilder{}
 }
 
-func (builder *ThumbnailBuilder) SetUrl(url string) *ThumbnailBuilder {
+func (builder *ThumbnailBuilder) Url(url string) *ThumbnailBuilder {
 	builder.url = url
 	return builder
 }

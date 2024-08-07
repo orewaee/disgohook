@@ -31,17 +31,17 @@ func FromIdAndToken(id, token string) *WebhookBuilder {
 	return FromUrl(url)
 }
 
-func (builder *WebhookBuilder) SetUrl(url string) *WebhookBuilder {
+func (builder *WebhookBuilder) Url(url string) *WebhookBuilder {
 	builder.url = url
 	return builder
 }
 
-func (builder *WebhookBuilder) SetContent(content string) *WebhookBuilder {
+func (builder *WebhookBuilder) Content(content string) *WebhookBuilder {
 	builder.content = content
 	return builder
 }
 
-func (builder *WebhookBuilder) SetEmbeds(embeds ...*Embed) *WebhookBuilder {
+func (builder *WebhookBuilder) Embeds(embeds ...*Embed) *WebhookBuilder {
 	builder.embeds = embeds
 	return builder
 }
@@ -61,7 +61,7 @@ type Body struct {
 	Embeds  []*Embed `json:"embeds,omitempty"`
 }
 
-func (webhook *Webhook) SetName(name string) error {
+func (webhook *Webhook) Name(name string) error {
 	data := struct {
 		Name string `json:"name"`
 	}{name}
@@ -108,7 +108,7 @@ func (webhook *Webhook) SetName(name string) error {
 	return nil
 }
 
-func (webhook *Webhook) SetAvatar(base64 string) error {
+func (webhook *Webhook) Avatar(base64 string) error {
 	data := struct {
 		Avatar string `json:"avatar"`
 	}{base64}
